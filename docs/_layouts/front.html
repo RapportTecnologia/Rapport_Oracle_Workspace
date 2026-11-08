@@ -16,10 +16,22 @@ description: "Rapport Oracle é um oráculo multi-chain — EVM/Polygon, Solana 
   <!-- Módulos -->
   {% include portfolio.html
      collection="portfolio"
+     category="modulo"
      section_id="modulos"
      title="Módulos do Projeto"
      subtitle="Cada módulo é um repositório independente, integrado ao workspace como git submodule."
+     sort_by="order"
      column_class="col-md-4 col-sm-6" %}
+
+  <!-- Exemplos de uso -->
+  {% include portfolio.html
+     collection="portfolio"
+     category="exemplo"
+     section_id="exemplos"
+     title="Exemplos de Uso"
+     subtitle="Contratos consumidores completos, passo a passo, em Solidity, Anchor e Soroban."
+     sort_by="order"
+     column_class="col-md-3 col-sm-6" %}
 
   <!-- Apoie o projeto (Pix) -->
   {% include apoie.html %}

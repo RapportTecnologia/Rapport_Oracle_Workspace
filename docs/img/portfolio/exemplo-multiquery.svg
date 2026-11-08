@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Exemplo EVM — Múltiplas Consultas</title>
+  <desc id="desc">Contrato que emite várias queries e despacha os resultados pelo rqid.</desc>
+  <rect width="1200" height="800" fill="#101c30"/>
+  <circle cx="1120" cy="60" r="320" fill="#172a44"/>
+  <circle cx="40" cy="790" r="260" fill="#14243b"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="90" y="110" fill="#f5a347" font-size="24" letter-spacing="4">EXEMPLO · SOLIDITY</text>
+    <text x="85" y="248" fill="#ffffff" font-size="88" font-weight="700">MULTI-QUERY</text>
+    <text x="90" y="310" fill="#c5d3e5" font-size="34">Várias queries, um único callback</text>
+    <g fill="none" stroke="#67aee8" stroke-width="5">
+      <path d="M520 460h60m-15-15 15 15-15 15M520 540h60m-15-15 15 15-15 15"/>
+    </g>
+    <rect x="90" y="420" width="420" height="70" rx="14" fill="#203652" stroke="#67aee8" stroke-width="2"/>
+    <rect x="90" y="510" width="420" height="70" rx="14" fill="#203652" stroke="#67aee8" stroke-width="2"/>
+    <rect x="620" y="440" width="490" height="120" rx="18" fill="#f5a347"/>
+    <g font-family="Consolas, Menlo, monospace" font-size="24">
+      <text x="120" y="466" fill="#ffffff">rqids[0] = query("ETH") → EthUsd</text>
+      <text x="120" y="556" fill="#ffffff">rqids[1] = query("BTC") → BtcUsd</text>
+      <text x="660" y="490" fill="#172238" font-size="25" font-weight="700">purposeOf[rqid]</text>
+      <text x="660" y="535" fill="#172238">__callback despacha</text>
+    </g>
+    <text x="90" y="687" fill="#ffffff" font-size="29">Um rqid para cada propósito.</text>
+    <text x="90" y="737" fill="#91aac8" font-size="23">enum Purpose · mapping(bytes32 =&gt; Purpose) · dispatch</text>
+  </g>
+</svg>

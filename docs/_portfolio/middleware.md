@@ -3,7 +3,9 @@ layout: project
 title: "Middleware — Cloudflare Worker"
 description: "Worker Cloudflare que intermedeia requisições de oracle entre smart contracts e fontes de dados externas, no modelo Oraclize/Provable."
 tags: [middleware, Cloudflare Workers, oracle, Provable, Oraclize, KV, cron, TypeScript, resolver, ECDSA, ed25519]
-image: "middleware.svg"
+image: "/img/portfolio/middleware.svg"
+category: modulo
+order: 1
 ---
 
 ## O que é o Middleware

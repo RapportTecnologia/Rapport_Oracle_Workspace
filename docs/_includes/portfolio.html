@@ -5,6 +5,9 @@
 {% elsif include.exclude_featured %}
   {% assign collection_items = collection_items | where_exp: "item", "item.featured != true" %}
 {% endif %}
+{% if include.category %}
+  {% assign collection_items = collection_items | where: "category", include.category %}
+{% endif %}
 {% if include.sort_by %}
   {% assign collection_items = collection_items | sort: include.sort_by %}
 {% endif %}
@@ -35,7 +38,7 @@
               </div>
             </div>
             <img
-              src="{% if project.image contains 'http' %}{{ project.image }}{% else %}{{ image_root | relative_url }}{{ project.image }}{% endif %}"
+              src="{% if project.image contains 'http' %}{{ project.image }}{% elsif project.image contains '/' %}{{ project.image | relative_url }}{% else %}{{ image_root | relative_url }}{{ project.image }}{% endif %}"
               class="img-responsive"
               alt="{{ project.title }}"
               width="1200"

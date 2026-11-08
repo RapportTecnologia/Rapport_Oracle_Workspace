@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Exemplo EVM — Preço ETH/USD</title>
+  <desc id="desc">Contrato consumidor em Solidity que consulta o preço ETH/USD via Rapport Oracle.</desc>
+  <rect width="1200" height="800" fill="#101c30"/>
+  <circle cx="1120" cy="60" r="320" fill="#172a44"/>
+  <circle cx="40" cy="790" r="260" fill="#14243b"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="90" y="110" fill="#f5a347" font-size="24" letter-spacing="4">EXEMPLO · SOLIDITY</text>
+    <text x="85" y="248" fill="#ffffff" font-size="96" font-weight="700">ETH/USD PRICE</text>
+    <text x="90" y="310" fill="#c5d3e5" font-size="34">O consumidor canônico do oracle</text>
+    <rect x="90" y="390" width="1020" height="230" rx="18" fill="#172a44" stroke="#67aee8" stroke-width="2"/>
+    <g font-family="Consolas, Menlo, monospace" font-size="26">
+      <text x="130" y="450" fill="#f5a347">function</text>
+      <text x="280" y="450" fill="#ffffff">update() public returns (bytes32 rqid)</text>
+      <text x="130" y="500" fill="#67aee8">rqid = rapport_oracle_query(delay, "URL",</text>
+      <text x="130" y="545" fill="#a5d6a7">  "json(...cryptocompare...).USD");</text>
+      <text x="130" y="600" fill="#7d8aa0">// callback: ethUsd = parseInt(_result, 2);</text>
+    </g>
+    <text x="90" y="687" fill="#ffffff" font-size="29">query → evento → worker → __callback</text>
+    <text x="90" y="737" fill="#91aac8" font-size="23">Solidity ^0.8.24 · usingRapportOracle · Polygon Amoy</text>
+  </g>
+</svg>
