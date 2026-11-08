@@ -1,0 +1,6 @@
+[submodule "middleware"]
+	path = middleware
+	url = https://github.com/RapportTecnologia/rapport_oracle_middleware.git
+[submodule "smartcontracts"]
+	path = smartcontracts
+	url = https://github.com/RapportTecnologia/rapport_oracle.git
