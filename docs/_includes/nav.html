@@ -1,0 +1,34 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <!-- Mobile Menu Button -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="{{ '/' | relative_url }}">Rapport Oracle</a>
+      </div>
+  
+      <!-- Menu Links -->
+      <div class="collapse navbar-collapse" id="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          {% for nav in site.data.nav.header %}
+          {% if nav.children %}
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ nav.title }} <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              {% for child in nav.children %}
+              <li><a href="{{ child.link | relative_url }}">{{ child.title }}</a></li>
+              {% endfor %}
+            </ul>
+          </li>
+          {% else %}
+          <li><a href="{% if nav.link contains '://' %}{{ nav.link }}{% else %}{{ nav.link | relative_url }}{% endif %}">{{ nav.title }}</a></li>
+          {% endif %}
+          {% endfor %}
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container -->
+  </nav>

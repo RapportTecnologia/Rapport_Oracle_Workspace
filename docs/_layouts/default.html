@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'pt-BR' }}">
+
+<head>
+  {% include head.html %}
+</head>
+
+<body id="page-top">
+  
+  <!-- Navegação -->
+  {% include nav.html %}
+  
+  <!-- Header -->
+  {% unless page.hide_site_header %}
+    {% include header.html %}
+  {% endunless %}
+
+{{ content }}
+
+
+  <!-- Rodapé -->
+  {% include footer.html %}
+  
+  <!-- Scripts específicos (Tawk.to e WhatsApp) -->
+  {% include tawkto.html %}
+  {% include whatsappme.html %}
+
+  {% include gtag.html %}
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Rapport Oracle — Workspace</title>
+  <desc id="desc">Workspace raiz que integra os submódulos middleware e smartcontracts.</desc>
+  <rect width="1200" height="800" fill="#101c30"/>
+  <circle cx="1120" cy="60" r="320" fill="#172a44"/>
+  <circle cx="40" cy="790" r="260" fill="#14243b"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="90" y="110" fill="#f5a347" font-size="24" letter-spacing="4">RAPPORT ORACLE</text>
+    <text x="85" y="248" fill="#ffffff" font-size="96" font-weight="700">WORKSPACE</text>
+    <text x="90" y="310" fill="#c5d3e5" font-size="34">Repositório raiz · Git submodules</text>
+    <g fill="none" stroke="#67aee8" stroke-width="6">
+      <path d="M600 405v-60"/>
+      <path d="M330 495h-60m15-15-15 15 15 15M870 495h60m-15-15 15 15-15 15" stroke-dasharray="1 0"/>
+    </g>
+    <rect x="435" y="380" width="330" height="90" rx="18" fill="#f5a347"/>
+    <rect x="90" y="500" width="440" height="90" rx="18" fill="#203652" stroke="#67aee8" stroke-width="2"/>
+    <rect x="670" y="500" width="440" height="90" rx="18" fill="#203652" stroke="#67aee8" stroke-width="2"/>
+    <g text-anchor="middle">
+      <text x="600" y="436" fill="#172238" font-size="26" font-weight="700" letter-spacing="2">Rapport_Oracle_Workspace</text>
+      <text x="310" y="556" fill="#ffffff" font-size="26" font-weight="700">middleware/ → worker repo</text>
+      <text x="890" y="556" fill="#ffffff" font-size="26" font-weight="700">smartcontracts/ → oracle repo</text>
+    </g>
+    <text x="90" y="687" fill="#ffffff" font-size="29">git clone --recurse-submodules</text>
+    <text x="90" y="737" fill="#91aac8" font-size="23">Conventional Branch · Conventional Commits · issues e pipelines por repo</text>
+  </g>
+</svg>
