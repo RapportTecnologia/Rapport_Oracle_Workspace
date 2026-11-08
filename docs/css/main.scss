@@ -219,3 +219,24 @@ header {
         gap: 24px;
     }
 }
+
+// Callout de faucets (aviso em páginas de projeto/módulo)
+.faucets-callout {
+    margin: 40px 0 20px;
+    padding: 18px 22px;
+    border-left: 4px solid #F05F40;
+    border-radius: 0 8px 8px 0;
+    background-color: #faf6f3;
+    color: #444;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.faucets-callout .fa {
+    color: #F05F40;
+    margin-right: 8px;
+}
+
+.faucets-callout a {
+    font-weight: 600;
+}
