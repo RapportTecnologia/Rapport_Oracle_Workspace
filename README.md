@@ -59,6 +59,15 @@ git submodule update --init --recursive
 - Cada submódulo possui seu próprio arquivo de variáveis
   (`.env` / `.dev.vars`); consulte o README de cada módulo.
 
+## Faucets para teste
+
+Precisa de tokens de teste para experimentar o oracle — POL na Polygon
+Amoy, SOL na devnet da Solana ou XLM na testnet da Stellar? Solicite
+diretamente
+[abrindo uma issue neste repositório](https://github.com/RapportTecnologia/Rapport_Oracle_Workspace/issues/new?title=Solicita%C3%A7%C3%A3o%20de%20Faucet%20para%20teste&body=Rede%3A%20(ex.%3A%20Polygon%20Amoy%2C%20Solana%20devnet%2C%20Stellar%20testnet)%0AEndere%C3%A7o%20da%20carteira%3A%0AQuantidade%20estimada%3A)
+ou pela página [Crypto Faucets](https://rapport.tec.br/crypto-faucets/)
+da Rapport.
+
 ## Segurança
 
 - Chaves privadas, tokens e segredos vivem apenas em arquivos `.env`
