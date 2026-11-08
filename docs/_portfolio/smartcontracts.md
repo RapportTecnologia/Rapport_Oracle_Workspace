@@ -3,7 +3,9 @@ layout: project
 title: "Smart Contracts"
 description: "Conectores on-chain do oracle para EVM/Polygon, Solana e Stellar, com bibliotecas para desenvolvedores e exemplos de consumidores."
 tags: [smart contracts, Solidity, Anchor, Soroban, EVM, Polygon, Solana, Stellar, oracle, Hardhat, Foundry, Safe multisig]
-image: "smartcontracts.svg"
+image: "/img/portfolio/smartcontracts.svg"
+category: modulo
+order: 2
 ---
 
 ## O que são os Smart Contracts
