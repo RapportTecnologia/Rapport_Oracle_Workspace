@@ -22,3 +22,21 @@ layout: default
        subtitle=page.portfolio_subtitle
        sort_by=page.portfolio_sort_by %}
   {% endif %}
+
+  {% if page.code_highlight %}
+  <!-- highlight.js: destaca blocos <pre><code class="language-*"> gerados pelo kramdown.
+       O build comum não traz a gramática Solidity — carregada do pacote
+       highlightjs-solidity (mantido pela equipe Solidity), que se auto-registra. -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/highlightjs-solidity@2.0.6/dist/solidity.min.js"></script>
+  <script>
+    document.querySelectorAll('pre code[class*="language-"]').forEach(function (el) {
+      var lang = (el.className.match(/language-(\S+)/) || [])[1];
+      if (lang && !hljs.getLanguage(lang)) {
+        // gramática ausente: deixa o hljs auto-detectar em vez de ignorar
+        el.className = el.className.replace(/language-\S+/, '').trim();
+      }
+      hljs.highlightElement(el);
+    });
+  </script>
+  {% endif %}

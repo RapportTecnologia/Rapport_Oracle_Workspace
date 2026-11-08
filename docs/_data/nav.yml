@@ -7,6 +7,8 @@ header:
     title: Arquitetura
   - link: '/#modulos'
     title: Módulos
+  - link: '/#exemplos'
+    title: Exemplos
   - link: '/#apoie'
     title: Apoie
   - link: '/#contact'
@@ -24,6 +26,8 @@ columns:
         url: "/#arquitetura"
       - title: "Módulos"
         url: "/#modulos"
+      - title: "Exemplos de Uso"
+        url: "/#exemplos"
       - title: "Apoie o Projeto"
         url: "/#apoie"
       - title: "Contato"

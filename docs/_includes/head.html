@@ -53,7 +53,7 @@
     <!-- page custom CSS -->
      <style>
       header {
-        background-image: url('{% if page.image %}{% if page.image contains 'http' %}{{ page.image }}{% elsif page.collection == 'post' %}{{ site.url }}{{ site.baseurl }}/{{ site.urlimg }}/{{ page.image }}{% else %}{{site.url}}{{ site.baseurl }}/{{ site.urlimg }}/{{ page.collection }}/{{page.image}}{% endif %}{% else %}{{site.url}}{{ site.baseurl }}/{{ site.urlimg }}/{{ site.defaultimg }}{% endif %}');
+        background-image: url('{% if page.image %}{% if page.image contains 'http' %}{{ page.image }}{% elsif page.image contains '/' %}{{ site.url }}{{ site.baseurl }}{{ page.image }}{% elsif page.collection == 'post' %}{{ site.url }}{{ site.baseurl }}/{{ site.urlimg }}/{{ page.image }}{% else %}{{site.url}}{{ site.baseurl }}/{{ site.urlimg }}/{{ page.collection }}/{{page.image}}{% endif %}{% else %}{{site.url}}{{ site.baseurl }}/{{ site.urlimg }}/{{ site.defaultimg }}{% endif %}');
       }
      </style>
     <!-- Favicon -->

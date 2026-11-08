@@ -3,7 +3,9 @@ layout: project
 title: "Workspace"
 description: "Repositório raiz que integra os módulos do Rapport Oracle como git submodules, com regras de engenharia e utilitários locais."
 tags: [workspace, git submodules, monorepo, Devin rules, Conventional Commits, engenharia]
-image: "workspace.svg"
+image: "/img/portfolio/workspace.svg"
+category: modulo
+order: 3
 ---
 
 ## O que é o Workspace
