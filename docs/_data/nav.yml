@@ -1,0 +1,49 @@
+header:
+  - link: '/'
+    title: Início
+  - link: '/#sobre'
+    title: O Projeto
+  - link: '/#arquitetura'
+    title: Arquitetura
+  - link: '/#modulos'
+    title: Módulos
+  - link: '/#apoie'
+    title: Apoie
+  - link: '/#contact'
+    title: Contato
+  - link: 'https://rapport.tec.br'
+    title: Rapport Tecnologia
+columns:
+  - title: "O Projeto"
+    links:
+      - title: "Início"
+        url: "/"
+      - title: "Sobre o Oracle"
+        url: "/#sobre"
+      - title: "Arquitetura"
+        url: "/#arquitetura"
+      - title: "Módulos"
+        url: "/#modulos"
+      - title: "Apoie o Projeto"
+        url: "/#apoie"
+      - title: "Contato"
+        url: "/#contact"
+  - title: "Repositórios"
+    links:
+      - title: "Workspace"
+        url: "https://github.com/RapportTecnologia/Rapport_Oracle_Workspace"
+      - title: "Middleware (Worker)"
+        url: "https://github.com/RapportTecnologia/rapport_oracle_middleware"
+      - title: "Smart Contracts"
+        url: "https://github.com/RapportTecnologia/rapport_oracle"
+  - title: "Rapport Tecnologia"
+    links:
+      - title: "Site Principal"
+        url: "https://rapport.tec.br"
+      - title: "GitHub"
+        url: "https://github.com/rapporttecnologia"
+      - title: "Agentic Space"
+        url: "https://agenticspace.rapport.tec.br"
+  - title: "Módulos"
+    dynamic: true
+    collection: "portfolio"

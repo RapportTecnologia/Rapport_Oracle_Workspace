@@ -1,0 +1,59 @@
+<footer class="footer footer-custom">
+  <div class="container">
+    <div class="row">
+      {% for column in site.data.nav.columns %}
+        <div class="col-md-3 col-sm-6">
+          <h4>{{ column.title }}</h4>
+          <ul class="list-unstyled">
+            {% if column.dynamic and column.collection %}
+              {% assign collection_items = site[column.collection] %}
+              {% for item in collection_items %}
+                <li>
+                  {% if item.icon %}
+                    <span class="fa fa-{{ item.icon | downcase }}"></span>
+                  {% endif %}
+                  <a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+              {% endfor %}
+            {% else %}
+              {% for link in column.links %}
+              <li>
+                {% if link.icon %}
+                  <i class="fa fa-{{ link.icon }}"></i>
+                {% endif %}
+                <a href="{% if link.url contains '://' %}{{ link.url }}{% else %}{{ link.url | relative_url }}{% endif %}">{{ link.title }}</a></li>
+              {% endfor %}
+            {% endif %}
+          </ul>
+        </div>
+      {% endfor %}
+    </div>
+
+    <!-- Dados da Empresa -->
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <p>
+          <strong>Nome:</strong> Raport Tecnologia Inova Simples<br>
+          <strong>CNPJ:</strong> 67.904.299/0001-80<br>
+          <strong>CEO/CTO/CDO:</strong> Carlos Delfino Carvalho Pinheiro<br>
+          <strong>Contato:</strong> <a href="mailto:admin@rapport.tec.br">admin@rapport.tec.br</a> e <a href="mailto:consultoria@carlosdelfino.eti.br">consultoria@carlosdelfino.eti.br</a><br>
+          <strong>Whatsapp:</strong> <a href="https://wa.me/5585985205490" target="_blank" rel="noopener noreferrer">(+55 85) 985205490</a><br>
+          <strong>Endereço:</strong> Aquiraz, Ceará, Brasil
+        </p>
+      </div>
+    </div>
+
+    <!-- Direitos Autorais -->
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <p class="copyright">
+          © {{ "now" | date: "%Y" }} <a href="https://carlosdelfino.eti.br" target="_blank" rel="noopener noreferrer">Carlos Delfino</a>.
+          Autoria dos conceitos, projetos e concepção do layout deste site. Todos os direitos autorais reservados.
+        </p>
+        <p class="copyright">
+          Estas páginas são geradas com o ChatGPT, utilizando o modelo GPT-5.6 Sol (Extra High),
+          e também com Windsurf/Devin, utilizando o modelo SWE-5.7.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>

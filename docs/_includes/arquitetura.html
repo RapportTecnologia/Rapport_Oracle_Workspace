@@ -1,0 +1,53 @@
+<section id="arquitetura" class="bg-light-gray">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading">Arquitetura</h2>
+          <h3 class="section-subheading text-muted">Ciclo de vida de uma query, do evento on-chain ao callback assinado.</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <pre style="background:#101c30;color:#c5d3e5;border:none;border-radius:8px;padding:24px;font-size:13px;line-height:1.5;">
+[Consumidor] --query--&gt; [Conector on-chain] --LogNewQuery/evento--&gt; [Worker cron]
+     ^                                                              |
+     |                                                              v
+     |                                                    fetch URL + extrai path
+     |                                                              |
+     +------------------- __callback(rqid, result, proof) &lt;----------+
+                          (tx assinada pelo relayer/cbAddress)</pre>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 text-center">
+          <div class="service-box">
+            <i class="fa fa-3x fa-file-code-o text-primary"></i>
+            <h3>Conectores on-chain</h3>
+            <p class="text-muted">Contratos e programas que recebem <code>query(delay, datasource, arg)</code>, emitem o evento e validam o callback. Bibliotecas prontas para desenvolvedores em Solidity, Anchor e Soroban.</p>
+          </div>
+        </div>
+        <div class="col-md-4 text-center">
+          <div class="service-box">
+            <i class="fa fa-3x fa-cogs text-primary"></i>
+            <h3>Middleware off-chain</h3>
+            <p class="text-muted">Worker Cloudflare que faz polling dos logs a cada minuto, resolve a datasource <code>"URL"</code> com cap de tamanho e timeout, e deduplica queries via KV.</p>
+          </div>
+        </div>
+        <div class="col-md-4 text-center">
+          <div class="service-box">
+            <i class="fa fa-3x fa-key text-primary"></i>
+            <h3>Relayer + prova</h3>
+            <p class="text-muted">O relayer assina <code>keccak256(qid, result, consumer)</code> e envia a transação de callback. O consumidor confirma a origem verificando <code>cbAddress</code> e a prova.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 text-center">
+          <p class="text-muted" style="margin-top:30px;">
+            <strong>Limites da v1:</strong> datasource <code>"URL"</code> apenas, até 3 tentativas por query e
+            delay com granularidade de ~1 min. TLSNotary/zk proof estão no roadmap.
+          </p>
+        </div>
+      </div>
+    </div>
+</section>

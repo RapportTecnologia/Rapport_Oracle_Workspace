@@ -1,0 +1,46 @@
+# Site settings
+title: "Rapport Oracle"
+email: "admin@rapport.tec.br"
+whatsapp: "(+55 85) 98520-5490"
+
+keywords: ['Rapport Oracle', 'oráculo blockchain', 'oracle multi-chain', 'Provable', 'Oraclize', 'Cloudflare Workers', 'EVM', 'Polygon', 'Solana', 'Stellar', 'Soroban', 'Anchor', 'smart contracts', 'Web3', 'Rapport Tecnologia', 'dados off-chain', 'callback on-chain']
+description: "Rapport Oracle é um oráculo multi-chain (EVM/Polygon, Solana e Stellar) no modelo Oraclize/Provable, com middleware em Cloudflare Workers e conectores on-chain com provas criptográficas."
+
+lang: "pt-BR"
+timezone: "America/Fortaleza"
+author: "Rapport Tecnologia"
+logo: "/img/header.jpg"
+social:
+  name: "Rapport Tecnologia"
+  links:
+    - "https://github.com/rapporttecnologia"
+
+baseurl: "/Rapport_Oracle_Workspace" # subpath do GitHub Pages (project site)
+url: "https://rapporttecnologia.github.io" # the base hostname & protocol for your site
+urlimg: "img"
+defaultimg: "header.jpg"
+
+github_username: rapporttecnologia
+repository: "RapportTecnologia/Rapport_Oracle_Workspace"
+
+# Build settings
+markdown: kramdown
+
+collections:
+  portfolio:
+    output: true
+    permalink: /modulos/:path/
+
+permalink: /paginas/:title/
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-redirect-from
+  - jekyll-seo-tag
+  - jekyll-feed
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE

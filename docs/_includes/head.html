@@ -1,0 +1,65 @@
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Título da Página -->
+    {% unless site.plugins contains 'jekyll-seo-tag' %}
+      <title>{{ page.title }} - {{ site.title }}</title>
+    {% endunless %}
+
+    {% seo %}
+
+    <!-- Meta Description -->
+    {% unless site.plugins contains 'jekyll-seo-tag' %}
+      {% if page.description %}
+        <meta name="description" content="{{ page.description }}">
+      {% else %}
+        <meta name="description" content="{{ site.description }}">
+      {% endif %}
+    {% endunless %}
+  
+    <!-- Meta Author -->
+    {% unless site.plugins contains 'jekyll-seo-tag' %}
+      {% if page.author %}
+        <meta name="author" content="{{ page.author }}">
+      {% endif %}
+    {% endunless %}
+  
+    <!-- Meta Keywords -->
+    {% if page.keywords %}
+      <meta name="keywords" content="{{ page.keywords }}">
+    {% elsif page.tags %}
+      <meta name="keywords" content="{{ page.tags | join: ', ' }}">
+    {% else %}
+      <meta name="keywords" content="{{ site.keywords | join: ', ' }}">
+    {% endif %}
+
+    <!-- Bootstrap Core CSS via CDN (sem o atributo integrity) -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" crossorigin="anonymous">
+
+    <!-- Font Awesome via CDN (sem o atributo integrity) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
+
+    <!-- Animate CSS via CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ '/css/main.css' | relative_url }}" type="text/css">
+
+    {% if page.custom_css %}
+      <link rel="stylesheet" href="{{ page.custom_css | relative_url }}" type="text/css">
+    {% endif %}
+  
+    <!-- page custom CSS -->
+     <style>
+      header {
+        background-image: url('{% if page.image %}{% if page.image contains 'http' %}{{ page.image }}{% elsif page.collection == 'post' %}{{ site.url }}{{ site.baseurl }}/{{ site.urlimg }}/{{ page.image }}{% else %}{{site.url}}{{ site.baseurl }}/{{ site.urlimg }}/{{ page.collection }}/{{page.image}}{% endif %}{% else %}{{site.url}}{{ site.baseurl }}/{{ site.urlimg }}/{{ site.defaultimg }}{% endif %}');
+      }
+     </style>
+    <!-- Favicon -->
+    <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" type="image/x-icon">
+
+    <!-- Google Tag Manager -->
+    {% include gtag.html %}
+    <!-- Scripts -->
+    {% include scripts.html %}
